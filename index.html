@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Arcturian Healing Chamber | Arcturian Energy & Starseed Awakening</title>
+  <!-- Google Fonts + Font Awesome 6 -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f3f0fa;
+      font-family: 'Inter', sans-serif;
+      color: #17122c;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2rem 1.8rem;
+    }
+
+    /* NEW THEME: Deep indigo + warm gold + soft lavender */
+    .hero {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 2px solid #cfc1f0;
+    }
+    .hero h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 2.7rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #1e1a4f, #6b46b5, #bf8f3f);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #2d2a4a;
+      max-width: 760px;
+      margin: 0.8rem auto 0;
+    }
+    .keyword-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 1.2rem 0 0.2rem;
+    }
+    .pill {
+      background: #e5d9ff;
+      padding: 0.3rem 1.1rem;
+      border-radius: 60px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #2e2363;
+      letter-spacing: -0.2px;
+    }
+
+    /* main article card - light cream with subtle shadow */
+    .article-card {
+      background: #fffefb;
+      border-radius: 2rem;
+      box-shadow: 0 20px 35px -10px rgba(30, 20, 50, 0.08);
+      padding: 2rem 2rem;
+      margin-bottom: 2.5rem;
+      border: 1px solid #e5daf5;
+      transition: all 0.2s;
+    }
+    .article-card h2 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #251c54;
+      margin: 1.2rem 0 0.6rem;
+    }
+    .article-card h3 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #8b5e3c;
+      margin: 1.5rem 0 0.5rem;
+    }
+    .article-card p {
+      font-size: 1.03rem;
+      color: #2c2542;
+      margin-bottom: 1rem;
+      line-height: 1.65;
+    }
+    .article-card a {
+      color: #b77c2e;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1.5px solid #f2e0b5;
+      transition: 0.2s;
+    }
+    .article-card a:hover {
+      color: #8b5a1f;
+      border-bottom-color: #dcbc7a;
+    }
+    .btn-embed {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #f5efe3;
+      padding: 0.3rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin: 0.2rem 0;
+    }
+    .list-styled {
+      margin: 0.75rem 0 1rem 1.6rem;
+      list-style-type: disc;
+    }
+    .list-styled li {
+      margin: 0.45rem 0;
+    }
+
+    /* social row - warm theme */
+    .social-row {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+    .social-card {
+      background: #fffef9;
+      border-radius: 2rem;
+      padding: 2rem 2rem;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
+      border: 1px solid #ecdfd0;
+      text-align: center;
+      width: 100%;
+      max-width: 580px;
+    }
+    .social-card h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #2a204b;
+      margin-bottom: 0.5rem;
+    }
+    .social-icons {
+      display: flex;
+      gap: 1.7rem;
+      justify-content: center;
+      margin: 1.4rem 0 1rem;
+      flex-wrap: wrap;
+    }
+    .social-icon {
+      background: #f4eede;
+      width: 58px;
+      height: 58px;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      transition: 0.2s;
+      color: #aa7c3c;
+      text-decoration: none;
+    }
+    .social-icon:hover {
+      background: #e6d5bb;
+      transform: translateY(-5px);
+      color: #7a5627;
+    }
+    .social-text {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #5e5180;
+    }
+
+    /* contact section - updated theme */
+    .contact-block {
+      background: linear-gradient(110deg, #ffffff 0%, #fef9ef 100%);
+      border-radius: 2rem;
+      padding: 2rem 2rem;
+      margin-bottom: 2rem;
+      border: 1px solid #e9decf;
+    }
+    .contact-block h2 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #2b1f51;
+    }
+    .contact-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    .contact-details {
+      flex: 1;
+    }
+    .contact-details p {
+      margin: 0.9rem 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .contact-details a {
+      color: #b07e3a;
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px dashed #eedbba;
+    }
+    .contact-details a:hover {
+      color: #7c581f;
+    }
+    .contact-cta-card {
+      flex: 1;
+      background: #fefaf2;
+      border-radius: 1.4rem;
+      padding: 1.3rem 1.5rem;
+      border: 1px solid #efe1cf;
+    }
+
+    /* footer backlinks */
+    .backlink-footer {
+      background: #fefcf7;
+      border-radius: 1.8rem;
+      padding: 1rem 1.5rem;
+      margin: 1rem 0 1.2rem;
+      text-align: center;
+      border: 1px solid #e8dccd;
+    }
+    .backlink-footer a {
+      margin: 0 0.7rem;
+      color: #b07e3a;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 0.85rem;
+      display: inline-block;
+    }
+    .copyright {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #6b6082;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #dfd4e8;
+    }
+    hr {
+      margin: 1rem 0;
+      border: 0;
+      height: 1px;
+      background: linear-gradient(90deg, #e9dccf, transparent);
+    }
+    @media (max-width: 780px) {
+      .container {
+        padding: 1rem;
+      }
+      .article-card {
+        padding: 1.4rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+    .faq-summary {
+      background: #fdf9f2;
+      border-radius: 1.2rem;
+      padding: 1.2rem;
+      margin-top: 1rem;
+    }
+    .keyword-badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 1rem;
+    }
+    .kw {
+      background: #f0e9dd;
+      padding: 0.2rem 0.7rem;
+      border-radius: 24px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #624a1e;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- Hero section - themed -->
+  <div class="hero">
+    <h1>🌀 Arcturian Healing Chamber<br>Ultimate Guide to Arcturian Energy & Starseeds</h1>
+    <p>Awaken your soul connection to the <strong>Arcturian star system</strong>, receive <strong>Arcturian messages</strong> and transform through the <strong>Arcturian Healing Chamber</strong></p>
+    <div class="keyword-cloud">
+      <span class="pill">⭐ Arcturian starseed</span>
+      <span class="pill">🌀 Arcturian Healing Course</span>
+      <span class="pill">📡 Arcturian contact</span>
+      <span class="pill">✨ Arcturian council</span>
+    </div>
+  </div>
+
+  <!-- MAIN ARTICLE (full updated article with keyword contextual links) -->
+  <div class="article-card">
+    <h2>Arcturian Healing Chamber: The Ultimate Guide to Arcturian Energy, Starseeds & Spiritual Awakening</h2>
+    <p>As humanity becomes more spiritually aware, many people are searching for deeper healing systems that connect the mind, body, and soul. One of the most powerful and fascinating concepts in modern spirituality is <strong><a href="https://www.infinitehealingfromthestars.com/arcturian-energy" target="_blank">Arcturian energy</a></strong>. Believed to originate from the advanced <a href="https://www.infinitehealingfromthestars.com/arcturian-star-system" target="_blank">Arcturian star system</a>, this high-frequency energy is associated with healing, consciousness expansion, and spiritual transformation.</p>
+    <p>From the transformative <strong><a href="https://www.infinitehealingfromthestars.com/arcturian-healing-chamber" target="_blank">Arcturian Healing Chamber</a></strong> to advanced learning through an <strong><a href="https://www.infinitehealingfromthestars.com/arcturian-healing-course" target="_blank">Arcturian Healing Course</a></strong>, countless spiritual seekers are discovering how these cosmic teachings can elevate their lives.</p>
+    <p>If you are ready to explore the wisdom of the Arcturians, begin here:<br>
+    <a href="https://www.infinitehealingfromthestars.com/" target="_blank" class="btn-embed"><i class="fas fa-star-of-life"></i> infinitehealingfromthestars.com</a></p>
+
+    <h3>What is Arcturian Energy?</h3>
+    <p><strong><a href="https://www.infinitehealingfromthestars.com/arcturian-energy" target="_blank">Arcturian energy</a></strong> is often described as a highly evolved healing frequency transmitted by advanced spiritual beings connected to the <strong>Arcturian star system</strong>. This energy is believed to support emotional healing, energetic balance, and spiritual awakening. Many practitioners believe the <strong>Arcturian council</strong> guides humanity through energetic transmissions and intuitive communication. These insights are commonly known as <strong><a href="https://www.infinitehealingfromthestars.com/arcturian-messages" target="_blank">Arcturian messages</a></strong> and may appear during meditation, dreams, or moments of deep spiritual awareness.</p>
+    <p>Discover more about Arcturian energy here:<br>
+    <a href="https://www.infinitehealingfromthestars.com/arcturian-energy" target="_blank"><i class="fas fa-feather-alt"></i> infinitehealingfromthestars.com/arcturian-energy</a></p>
+
+    <h3>The Powerful Experience of the Arcturian Healing Chamber</h3>
+    <p>The <strong><a href="https://www.infinitehealingfromthestars.com/arcturian-healing-chamber" target="_blank">Arcturian Healing Chamber</a></strong> is one of the most well-known tools used in Arcturian healing practices. It is typically visualized as a high-frequency chamber of light where individuals can receive energetic healing and spiritual alignment.</p>
+    <ul class="list-styled">
+      <li>Emotional cleansing and release</li>
+      <li>Deep energetic healing</li>
+      <li>Chakra balancing and activation</li>
+      <li>Heightened spiritual awareness</li>
+      <li>Greater inner peace and clarity</li>
+    </ul>
+    <p>Many individuals report feeling lighter, calmer, and more connected after working with the <strong>Arcturian Healing Chamber</strong>. Explore the healing potential here:<br>
+    <a href="https://www.infinitehealingfromthestars.com/arcturian-healing-chamber" target="_blank"><i class="fas fa-hand-sparkles"></i> infinitehealingfromthestars.com/arcturian-healing-chamber</a></p>
+
+    <h3>Why Take an Arcturian Healing Course?</h3>
+    <p>An <strong><a href="https://www.infinitehealingfromthestars.com/arcturian-healing-course" target="_blank">Arcturian Healing Course</a></strong> is designed for those who want to deepen their understanding of cosmic healing and spiritual development. Instead of relying on scattered information, a structured course offers clear guidance and practical techniques.</p>
+    <ul class="list-styled">
+      <li>How to connect with the <strong>Arcturian council</strong></li>
+      <li>Techniques for channeling <strong>Arcturian messages</strong></li>
+      <li>Understanding important <strong><a href="https://www.infinitehealingfromthestars.com/arcturian-characteristics" target="_blank">Arcturian characteristics</a></strong></li>
+      <li>Meditation and healing methods using <strong>Arcturian energy</strong></li>
+      <li>Spiritual practices for personal growth</li>
+    </ul>
+    <p>Start your Arcturian Healing Course journey here:<br>
+    <a href="https://www.infinitehealingfromthestars.com/arcturian-healing-course" target="_blank"><i class="fas fa-chalkboard-user"></i> infinitehealingfromthestars.com/arcturian-healing-course</a></p>
+
+    <h3>Signs You May Be an Arcturian Starseed</h3>
+    <p>The concept of the <strong><a href="https://www.infinitehealingfromthestars.com/arcturian-starseeed" target="_blank">Arcturian starseed</a></strong> has become increasingly popular among spiritual communities. A starseed is believed to be a soul that originated from another star system and incarnated on Earth to help humanity evolve.</p>
+    <p>Common <strong>Arcturian characteristics</strong> include:</p>
+    <ul class="list-styled">
+      <li>Strong intuition and psychic sensitivity</li>
+      <li>A natural desire to heal and guide others</li>
+      <li>Feeling different or disconnected from mainstream society</li>
+      <li>Deep interest in spirituality and cosmic knowledge</li>
+      <li>Strong emotional awareness and empathy</li>
+    </ul>
+    <p>If these signs resonate with you, you may feel naturally drawn to <strong>Arcturian energy</strong>. Learn more about the Arcturian starseed journey here:<br>
+    <a href="https://www.infinitehealingfromthestars.com/arcturian-starseeed" target="_blank"><i class="fas fa-moon"></i> infinitehealingfromthestars.com/arcturian-starseeed</a></p>
+
+    <h3>Understanding Arcturian Contact</h3>
+    <p>Many people seek <strong><a href="https://www.infinitehealingfromthestars.com/arcturian-contact" target="_blank">Arcturian contact</a></strong> as part of their spiritual path. Unlike physical encounters, spiritual Arcturian contact usually happens through intuition, meditation, dreams, and energetic communication.</p>
+    <ul class="list-styled">
+      <li>Meditation focused on Arcturian energy</li>
+      <li>Working inside the <strong>Arcturian Healing Chamber</strong></li>
+      <li>Taking an <strong>Arcturian Healing Course</strong></li>
+      <li>Practicing mindfulness and spiritual awareness</li>
+      <li>Remaining open to receiving <strong>Arcturian messages</strong></li>
+    </ul>
+    <p>Explore more about Arcturian contact here:<br>
+    <a href="https://www.infinitehealingfromthestars.com/arcturian-contact" target="_blank"><i class="fas fa-hand-peace"></i> infinitehealingfromthestars.com/arcturian-contact</a></p>
+
+    <h3>Benefits of Working with Arcturian Energy</h3>
+    <p>Working with <strong>Arcturian energy</strong> may offer several spiritual and emotional benefits, including increased clarity and focus, emotional healing, enhanced intuition, deeper spiritual connection and alignment with life purpose. For many <strong>Arcturian starseed</strong> individuals, this journey feels deeply transformative and meaningful.</p>
+
+    <!-- FAQ Section inside article -->
+    <h3>Frequently Asked Questions (FAQ)</h3>
+    <div class="faq-summary">
+      <p><strong>1. What is Arcturian energy?</strong><br>Arcturian energy is a high-frequency spiritual energy associated with the advanced Arcturian star system, often used for healing and consciousness expansion.</p>
+      <p><strong>2. What is the Arcturian Healing Chamber?</strong><br>The <strong><a href="https://www.infinitehealingfromthestars.com/arcturian-healing-chamber" target="_blank">Arcturian Healing Chamber</a></strong> is a meditative healing space where individuals connect with high-frequency energies for emotional, physical, and spiritual healing.</p>
+      <p><strong>3. What can I learn in an Arcturian Healing Course?</strong><br>An <strong><a href="https://www.infinitehealingfromthestars.com/arcturian-healing-course" target="_blank">Arcturian Healing Course</a></strong> teaches techniques for connecting with the Arcturian council, understanding Arcturian messages, and working with healing energy.</p>
+      <p><strong>4. Who are Arcturian starseeds?</strong><br><strong><a href="https://www.infinitehealingfromthestars.com/arcturian-starseeed" target="_blank">Arcturian starseed</a></strong> individuals are believed to have a soul connection to the Arcturian star system and often possess intuitive and healing abilities.</p>
+      <p><strong>5. What are common Arcturian characteristics?</strong><br>Typical <strong><a href="https://www.infinitehealingfromthestars.com/arcturian-characteristics" target="_blank">Arcturian characteristics</a></strong> include empathy, intuition, spiritual awareness, emotional sensitivity, and a strong desire to help humanity.</p>
+      <p><strong>6. How can I receive Arcturian messages?</strong><br>You can receive <strong><a href="https://www.infinitehealingfromthestars.com/arcturian-messages" target="_blank">Arcturian messages</a></strong> through meditation, dreams, intuitive insights, and spiritual practices like the Arcturian Healing Chamber.</p>
+      <p><strong>7. Is Arcturian contact possible?</strong><br>Yes, many people believe <strong><a href="https://www.infinitehealingfromthestars.com/arcturian-contact" target="_blank">Arcturian contact</a></strong> occurs through spiritual and energetic communication rather than physical interaction.</p>
+      <p><strong>8. How do I begin working with Arcturian energy?</strong><br>You can begin by exploring meditation practices, guided healing sessions, or enrolling in a course here: <a href="https://www.infinitehealingfromthestars.com/" target="_blank">www.infinitehealingfromthestars.com</a></p>
+      <p><strong>9. Can beginners explore the Arcturian Healing Chamber?</strong><br>Yes, beginners can safely explore the <strong>Arcturian Healing Chamber</strong> through guided visualization and meditation practices.</p>
+      <p><strong>10. Why are so many people interested in Arcturian energy?</strong><br>Many people are drawn to Arcturian energy because it is associated with spiritual awakening, healing, higher consciousness, and personal transformation.</p>
+    </div>
+
+    <h3>Final Thoughts</h3>
+    <p>The world of <strong>Arcturian energy</strong> offers a fascinating path toward healing, awareness, and spiritual evolution. Whether you are exploring the <strong>Arcturian Healing Chamber</strong>, joining an <strong>Arcturian Healing Course</strong>, or seeking deeper <strong>Arcturian contact</strong>, these teachings can open the door to profound transformation.</p>
+    <p>Take your first step into cosmic healing today:<br>
+    <a href="https://www.infinitehealingfromthestars.com/" target="_blank"><strong>👉 www.infinitehealingfromthestars.com</strong></a></p>
+    <p>By connecting with the wisdom of the <strong>Arcturian council</strong> and embracing your unique <strong>Arcturian characteristics</strong>, you may discover a deeper sense of purpose, peace, and spiritual awakening.</p>
+
+    <!-- keyword badges -->
+    <div class="keyword-badge-list">
+      <span class="kw">🌀 Arcturian Healing Chamber</span>
+      <span class="kw">📘 Arcturian Healing Course</span>
+      <span class="kw">⚡ Arcturian energy</span>
+      <span class="kw">🌟 Arcturian starseed</span>
+      <span class="kw">🌌 Arcturian star system</span>
+      <span class="kw">🏛️ Arcturian council</span>
+      <span class="kw">💬 Arcturian messages</span>
+      <span class="kw">🎯 Arcturian characteristics</span>
+      <span class="kw">🤝 Arcturian contact</span>
+    </div>
+  </div>
+
+  <!-- Social links row (themed) -->
+  <div class="social-row">
+    <div class="social-card">
+      <h3><i class="fas fa-satellite-dish"></i> Connect with the Arcturian Collective</h3>
+      <p>Follow Viviane Chauvet & Arcturian University for daily Arcturian messages, healing sessions and starseed community.</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/viviane_chauvet" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/arcturianuniversity" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/in/vivianechauvet" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.youtube.com/@VivianeChauvetGalacticHealer" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="social-text">
+        <i class="fas fa-hand-sparkles"></i> Tune into live Arcturian Healing Chamber meditations & courses
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT SECTION (dedicated, new color scheme) -->
+  <div class="contact-block" id="contact">
+    <h2><i class="fas fa-comet"></i> Arcturian Light Embassy — Contact</h2>
+    <div class="contact-flex">
+      <div class="contact-details">
+        <p><i class="fas fa-globe" style="width: 30px; color:#b07e3a;"></i> <strong>Main Portal:</strong> <a href="https://www.infinitehealingfromthestars.com/" target="_blank">infinitehealingfromthestars.com</a></p>
+        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:light@infinitehealingfromthestars.com">light@infinitehealingfromthestars.com</a></p>
+        <p><i class="fab fa-instagram"></i> <strong>Instagram DM:</strong> <a href="https://www.instagram.com/viviane_chauvet" target="_blank">@viviane_chauvet</a></p>
+        <p><i class="fab fa-facebook"></i> <strong>Facebook:</strong> <a href="https://www.facebook.com/arcturianuniversity" target="_blank">Arcturian University</a></p>
+        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/vivianechauvet" target="_blank">Viviane Chauvet LinkedIn</a> &nbsp;|&nbsp; <i class="fab fa-youtube"></i> <a href="https://www.youtube.com/@VivianeChauvetGalacticHealer" target="_blank">YouTube Channel</a></p>
+        <p><i class="fas fa-star-of-life"></i> <strong>Arcturian Healing Course inquiries:</strong> private mentoring & group sessions.</p>
+      </div>
+      <div class="contact-cta-card">
+        <h4 style="margin-bottom: 0.7rem;"><i class="fas fa-paper-plane"></i> Reach out for cosmic guidance</h4>
+        <p>For <strong>Arcturian Healing Chamber</strong> attunements, <strong>Arcturian messages</strong> interpretation, or starseed mentorship, connect via any social platform. We usually reply within 24-48h.</p>
+        <hr>
+        <p><i class="fas fa-map-pin"></i> Worldwide online sessions — multidimensional healing from the Arcturian council.<br>
+        <a href="https://www.infinitehealingfromthestars.com/contactme" target="_blank" style="background:#eadbbc; display:inline-block; margin-top: 0.8rem; padding: 8px 20px; border-radius: 40px; text-decoration: none; font-weight: 600; color:#3d2a6b;"><i class="fas fa-id-card"></i> Direct contact form</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer backlinks (all website URLs) -->
+  <div class="backlink-footer">
+    <p><strong>🌠 Arcturian Portals | Web 2.0 Resource</strong></p>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 8px;">
+      <a href="https://www.infinitehealingfromthestars.com/" target="_blank">🏠 Home</a>
+      <a href="https://www.infinitehealingfromthestars.com/arcturian-star-system" target="_blank">✨ Star System</a>
+      <a href="https://www.infinitehealingfromthestars.com/arcturian-energy" target="_blank">⚡ Arcturian Energy</a>
+      <a href="https://www.infinitehealingfromthestars.com/arcturian-starseeed" target="_blank">🌟 Starseed</a>
+      <a href="https://www.infinitehealingfromthestars.com/arcturian-contact" target="_blank">📡 Contact</a>
+      <a href="https://www.infinitehealingfromthestars.com/arcturian-healing-course" target="_blank">📖 Healing Course</a>
+      <a href="https://www.infinitehealingfromthestars.com/arcturian-healing-chamber" target="_blank">🌀 Healing Chamber</a>
+      <a href="https://www.infinitehealingfromthestars.com/arcturian-messages" target="_blank">💬 Messages</a>
+      <a href="https://www.infinitehealingfromthestars.com/arcturian-characteristics" target="_blank">📜 Characteristics</a>
+      <a href="https://www.infinitehealingfromthestars.com/contactme" target="_blank">📞 Contact Me</a>
+    </div>
+  </div>
+
+  <div class="copyright">
+    <i class="fas fa-infinity"></i> Arcturian Healing Chamber · Arcturian Healing Course · Arcturian starseed wisdom · Awakening with Arcturian council<br>
+    © 2025 — Infinite Healing From The Stars — galactic backlinks & light codes
+  </div>
+</div>
+</body>
+</html>
